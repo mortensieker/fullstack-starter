@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log
+.svelte-kit
+build
+.git
+.gitignore
+README.md
+.env
+.env.local
+.env.*.local
+*.md
+.DS_Store
+.vscode
+.idea
+*.log
+static
+vite.config.ts.timestamp-*
