@@ -16,18 +16,11 @@ updates:
     commit-message:
       prefix: "api"
       include: "scope"
-    # Group minor and patch updates together
+    # Group all API dependencies into one PR
     groups:
-      production-dependencies:
-        dependency-type: "production"
-        update-types:
-          - "minor"
-          - "patch"
-      development-dependencies:
-        dependency-type: "development"
-        update-types:
-          - "minor"
-          - "patch"
+      all-dependencies:
+        patterns:
+          - "*"
 
   # Web dependencies
   - package-ecosystem: "npm"
@@ -45,18 +38,11 @@ updates:
     commit-message:
       prefix: "web"
       include: "scope"
-    # Group minor and patch updates together
+    # Group all web dependencies into one PR
     groups:
-      production-dependencies:
-        dependency-type: "production"
-        update-types:
-          - "minor"
-          - "patch"
-      development-dependencies:
-        dependency-type: "development"
-        update-types:
-          - "minor"
-          - "patch"
+      all-dependencies:
+        patterns:
+          - "*"
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
@@ -74,3 +60,8 @@ updates:
     commit-message:
       prefix: "ci"
       include: "scope"
+    # Group all GitHub Actions updates into one PR
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
