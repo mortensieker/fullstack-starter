@@ -16,11 +16,14 @@ updates:
     commit-message:
       prefix: "api"
       include: "scope"
-    # Group all API dependencies into one PR
+    # Group all API dependencies into one PR (major + minor only)
     groups:
       all-dependencies:
         patterns:
           - "*"
+        update-types:
+          - "major"
+          - "minor"
 
   # Web dependencies
   - package-ecosystem: "npm"
@@ -38,11 +41,14 @@ updates:
     commit-message:
       prefix: "web"
       include: "scope"
-    # Group all web dependencies into one PR
+    # Group all web dependencies into one PR (major + minor only)
     groups:
       all-dependencies:
         patterns:
           - "*"
+        update-types:
+          - "major"
+          - "minor"
 
   # GitHub Actions
   - package-ecosystem: "github-actions"
@@ -60,8 +66,11 @@ updates:
     commit-message:
       prefix: "ci"
       include: "scope"
-    # Group all GitHub Actions updates into one PR
+    # Group all GitHub Actions updates into one PR (major + minor only)
     groups:
       all-dependencies:
         patterns:
           - "*"
+        update-types:
+          - "major"
+          - "minor"
